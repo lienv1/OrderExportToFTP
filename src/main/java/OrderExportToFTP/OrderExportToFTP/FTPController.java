@@ -48,16 +48,7 @@ public class FTPController {
 		try {file = fileConverter.generateCSV(order);} 
 		catch (IOException e) {e.printStackTrace(); return new ResponseEntity<String>("Unable to create csv file", HttpStatus.BAD_REQUEST);}
 		
-		success = true; /*ftpService.sendFileToFTPServer(file);*/
-		if (!file.exists()) {
-			System.out.println("File doesn't exist");
-			try {
-				file.createNewFile();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
+		success = ftpService.sendFileToFTPServer(file);
 		
 		if (!success)
 			return new ResponseEntity<String>("Unable to send file to ftp server", HttpStatus.BAD_REQUEST);

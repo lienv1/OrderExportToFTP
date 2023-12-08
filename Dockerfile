@@ -5,13 +5,13 @@ FROM openjdk:17-alpine
 WORKDIR /app
 
 # Copy the backend code to the container
-COPY target/emailservice-0.0.1-SNAPSHOT.jar /app/emailservice.jar
+COPY target/OrderExportToFTP-0.0.1-SNAPSHOT.jar /app/ftpservice.jar
 
 # Build the backend application
 # RUN ./gradlew build
 
 # Expose the port on which the backend will listen
-EXPOSE 8081
+EXPOSE 8082
 
 # Specify the command to run the backend application
-CMD ["java", "-jar", "emailservice.jar"]
+CMD ["java", "-jar", "ftpservice.jar"]

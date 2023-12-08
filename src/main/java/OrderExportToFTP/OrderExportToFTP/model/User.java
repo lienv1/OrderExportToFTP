@@ -5,6 +5,7 @@ public class User {
 
 	private Long userId;
 
+	private Long erpId;
 	private String company;
 	private String firstname;
 	private String lastname;
@@ -31,6 +32,14 @@ public class User {
 		this.userId = userId;
 	}
 	
+	public Long getErpId() {
+		return erpId;
+	}
+
+	public void setErpId(Long erpId) {
+		this.erpId = erpId;
+	}
+
 	public String getCompany() {
 		return company;
 	}
@@ -97,10 +106,10 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", company=" + company + ", firstname=" + firstname + ", lastname=" + lastname
-				+ ", phone=" + phone + ", email=" + email + ", deliveryAddress=" + deliveryAddress + ", billingAddress="
-				+ billingAddress + ", username=" + username + ", business=" + business + ", deleted=" + deleted + "]";
+		return "User [userId=" + userId + ", erpId=" + erpId + ", company=" + company + ", firstname=" + firstname
+				+ ", lastname=" + lastname + ", phone=" + phone + ", email=" + email + ", deliveryAddress="
+				+ deliveryAddress + ", billingAddress=" + billingAddress + ", username=" + username + ", business="
+				+ business + ", deleted=" + deleted + "]";
 	}
-	
 	
 }
