@@ -1,0 +1,17 @@
+package OrderExportToFTP.OrderExportToFTP;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/ftpservice")
+public class FTPController {
+
+	public FTPController() {
+		
+	}
+	
+	
+	
+	
+}
