@@ -50,6 +50,7 @@ public class FileConverter {
 		User user = order.getUser();
 		String orderDate = dateFormat.format(order.getOrderDate());
 		String comment = order.getComment();
+		//In case, the user doesn't exist in ERP yet.
 		Long erpId = user.getErpId() == null ? defaultid : user.getErpId();
 
 		for (OrderDetail detail : order.getOrderDetails()) {
