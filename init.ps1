@@ -10,4 +10,4 @@ docker build -t ftpservice-image .
 # Get the local IPv4 address
 $localIP = (Get-NetIPAddress | Where-Object { $_.AddressFamily -eq 'IPv4' -and $_.PrefixOrigin -eq 'Dhcp' }).IPAddress
 
-docker run --name ftpservice-container -d -e HOSTNAME="$localIP" -p 8082:8082 ftpservice-image
+docker run --name ftpservice-container -d -e HOSTNAME="$localIP" -e SERVICE_HTTPS_ENABLED=true -p 8082:8082 ftpservice-image
