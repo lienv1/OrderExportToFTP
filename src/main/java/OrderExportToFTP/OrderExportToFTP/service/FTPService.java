@@ -39,6 +39,7 @@ public class FTPService {
 		FTPClient ftpClient = new FTPClient();
 		boolean success = false;
 		try {
+			System.out.println("remote path: "+remotePath);
 			ftpClient.connect(server, port);
 			ftpClient.login(user, pass);
 			ftpClient.enterLocalPassiveMode();

@@ -4,7 +4,6 @@ package OrderExportToFTP.OrderExportToFTP.model;
 
 public class Address {
 
-    private Long addressId;
     private String street;
     private String city;
     private String state;
@@ -13,14 +12,6 @@ public class Address {
     
 	public Address() {
 	
-	}
-
-	public Long getAddressId() {
-		return addressId;
-	}
-
-	public void setAddressId(Long id) {
-		this.addressId = id;
 	}
 
 	public String getStreet() {
@@ -39,13 +30,6 @@ public class Address {
 		this.city = city;
 	}
 
-	public String getState() {
-		return state;
-	}
-
-	public void setState(String state) {
-		this.state = state;
-	}
 
 	public String getPostalCode() {
 		return postalCode;
@@ -63,11 +47,7 @@ public class Address {
 		this.country = country;
 	}
 
-	@Override
-	public String toString() {
-		return "Address [addressId=" + addressId + ", street=" + street + ", city=" + city + ", state=" + state
-				+ ", postalCode=" + postalCode + ", country=" + country + "]";
-	}
+	
 	
     
 
