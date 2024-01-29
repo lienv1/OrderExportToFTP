@@ -23,18 +23,14 @@ public class FTPController {
 
 	@Autowired
 	private FTPService ftpService;
-	
-	@Autowired
-	private SecurityService securityService;
 
 	@Autowired
 	private FileConverter fileConverter;
 	
 	private String preSharedKey;
 	
-	public FTPController(FTPService ftpService, SecurityService securityService, FileConverter fileConverter, @Value("${custom.property.presharedkey}") String preSharedKey) {
+	public FTPController(FTPService ftpService, FileConverter fileConverter, @Value("${custom.property.presharedkey}") String preSharedKey) {
 		this.ftpService = ftpService;
-		this.securityService = securityService;
 		this.fileConverter = fileConverter;
 		this.preSharedKey = preSharedKey;
 	}
